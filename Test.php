@@ -13,7 +13,7 @@ class Test extends Database{
      ->where([
          "column" => "id",
          "op" => ">",
-         "value" => 5
+         "value" => 6
      ])
      ->Select();
 
