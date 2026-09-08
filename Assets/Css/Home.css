@@ -1,0 +1,429 @@
+/* ==========================================================================
+   Home Content Area & Hero Styling
+   ========================================================================== */
+.home-header-section {
+    margin-bottom: 24px;
+}
+
+.home-header-section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.home-header-section p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Feed Outer Layout
+   ========================================================================== */
+.feed-container {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ==========================================================================
+   Feed Filter Navigation Tabs
+   ========================================================================== */
+.feed-filter-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 8px;
+}
+
+.feed-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.feed-tab-btn {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.feed-tab-btn:hover {
+    background-color: #f1f5f9;
+    color: var(--text-main);
+}
+
+.feed-tab-btn.active {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Feed Stream & Post Cards
+   ========================================================================== */
+.feed-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.post-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+}
+
+.post-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-author-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Post Body Content */
+.post-content p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.post-image-container {
+    margin-top: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    max-height: 400px;
+}
+
+.post-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Post Footer & Actions */
+.post-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+.post-stats {
+    display: flex;
+    gap: 16px;
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Outer container for the buttons */
+.post-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Each form takes equal space (1/3 width each) */
+.post-action-form {
+    flex: 1;
+    display: flex;
+    margin: 0;
+}
+
+/* Button fills 100% of its form wrapper */
+.post-action-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.post-action-btn:hover {
+    background-color: #f1f5f9;
+    color: var(--text-main);
+}
+
+.post-action-btn:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Empty State Block
+   ========================================================================== */
+.empty-feed-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--border-color);
+    padding: 48px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-feed-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.empty-feed-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.empty-feed-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    max-width: 320px;
+}
+
+/* ==========================================================================
+   Responsiveness Settings
+   ========================================================================== */
+@media (max-width: 768px) {
+    .feed-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feed-tabs {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .post-action-btn {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+
+    .action-icon {
+        font-size: 0.9rem;
+    }
+}
+/* ==========================================================================
+   Comment Dropdown Panel (Zero Gap + Smooth Transition Fix)
+   ========================================================================== */
+.comments-panel {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.25s ease, 
+                margin-top 0.25s ease;
+    margin-top: 0;
+}
+
+.comments-panel.open {
+    max-height: 500px; /* High enough to fit comments form & list */
+    opacity: 1;
+    margin-top: 12px;
+}
+
+.comments-panel-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px;
+    background-color: var(--bg-surface, #f8fafc);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Form Styles */
+.comment-submit-form {
+    width: 100%;
+}
+
+.comment-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.comment-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: var(--text-main);
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.comment-textarea:focus {
+    border-color: var(--primary-color, #2563eb);
+}
+
+.comment-submit-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--primary-color, #2563eb);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.comment-submit-btn:hover {
+    background-color: var(--primary-hover, #1d4ed8);
+}
+
+.comment-submit-btn:active {
+    transform: scale(0.97);
+}
+
+/* Comments Feed */
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Custom Scrollbar for Comments */
+.comments-list::-webkit-scrollbar {
+    width: 5px;
+}
+.comments-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.comments-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 10px;
+    background-color: var(--card-bg, #ffffff);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.comment-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.comment-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-author {
+    font-size: 0.825rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.comment-time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.comment-text {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Active State for Comment Action Button */
+.toggle-comment-btn.active {
+    background-color: #eff6ff;
+    color: var(--primary-color, #2563eb);
+}

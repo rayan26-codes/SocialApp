@@ -1,0 +1,326 @@
+/* ==========================================================================
+   CSS Resets & Variables
+   ========================================================================== */
+:root {
+    --primary-color: #2563eb;       /* Royal Blue */
+    --primary-hover: #1d4ed8;       /* Slightly Darker Blue */
+    --bg-color: #f8fafc;            /* Soft Off-White Background */
+    --card-bg: #ffffff;             /* Crisp White Card Background */
+    --text-main: #1e293b;           /* Slate Grey for Primary Text */
+    --text-muted: #64748b;          /* Light Slate for Labels & Subtexts */
+    --border-color: #cbd5e1;        /* Muted Border Grey */
+    --border-focus: #3b82f6;        /* Subtle Light Blue Focus ring */
+    --shadow-main: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --border-radius: 12px;
+    --transition-speed: 0.2s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Auth Container & Card Layout
+   ========================================================================== */
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-main);
+    padding: 40px 30px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.auth-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Form Fields
+   ========================================================================== */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+input {
+    width: 100%;
+    padding: 11px 16px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* ==========================================================================
+   Password Wrapper and Toggle Button
+   ========================================================================== */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 46px; /* Prevents text overlap with the eye icon */
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.toggle-password-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.eye-icon {
+    font-size: 1.1rem;
+    user-select: none;
+}
+
+/* ==========================================================================
+   Buttons and Anchor Links
+   ========================================================================== */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.1s ease;
+    margin-top: 6px;
+}
+
+.auth-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.auth-btn:active {
+    transform: scale(0.98);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+.auth-footer a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsiveness
+   ========================================================================== */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 24px 16px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+/* ==========================================================================
+   SVG Eye Icon Overrides
+   ========================================================================== */
+.eye-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: var(--text-muted); /* Automatically matches your design's text color */
+}
+
+.eye-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.toggle-password-btn:hover .eye-icon {
+    color: var(--text-main); /* Darkens slightly on hover */
+}
+/* ==========================================================================
+   Minimal Alert Messages (Success, Error, Warning, Info)
+   ========================================================================== */
+.auth-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border-left: 4px solid transparent;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: opacity 0.3s ease, transform 0.3s ease, margin-bottom 0.3s ease, padding 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Entrance Animation */
+@keyframes alertFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-message {
+    animation: alertFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dynamic Alert Type Variations */
+.auth-message.success {
+    background-color: #f0fdf4;
+    border-color: #22c55e;
+    color: #15803d;
+}
+
+.auth-message.error {
+    background-color: #fef2f2;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+
+.auth-message.warning {
+    background-color: #fffbeb;
+    border-color: #f59e0b;
+    color: #b45309;
+}
+
+.auth-message.info {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #1d4ed8;
+}
+
+.message-text {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+/* Minimal Close Button Styling */
+.close-message-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-message-btn:hover {
+    opacity: 1;
+}
+
+/* JavaScript Fade Out Hook */
+.auth-message.fade-out {
+    opacity: 0;
+    transform: translateY(-8px);
+    margin-bottom: -44px; /* Matches height smoothly during transition */
+    padding-top: 0;
+    padding-bottom: 0;
+}

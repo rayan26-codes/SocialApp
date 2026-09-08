@@ -1,0 +1,11 @@
+.app-footer {
+    padding: 20px 32px;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+.app-footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}

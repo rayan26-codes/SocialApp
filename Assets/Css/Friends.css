@@ -1,0 +1,383 @@
+/* Assets/Css/Friends.css */
+
+/* Main Layout Wrapper */
+.friends-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    font-family: inherit;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+.page-description {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Search Bar Area */
+.search-section {
+    margin-bottom: 32px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    max-width: 480px;
+}
+
+.search-box:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon {
+    font-size: 0.95rem;
+    margin-right: 12px;
+    opacity: 0.6;
+}
+
+.search-input {
+    width: 100%;
+    height: 46px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+/* Section Headings */
+.friends-section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 600;
+}
+
+.badge {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.badge-muted {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+/* Responsive Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* User Card Base Styling */
+.user-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* User Avatar */
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #eff6ff;
+}
+
+/* User Text Details */
+.user-info {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.user-name {
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0 0 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-status-text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.user-status-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #16a34a;
+    background-color: #f0fdf4;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Card Button Actions */
+.card-actions {
+    width: 100%;
+    margin-top: auto;
+}
+
+.dual-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    height: 38px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-sm {
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.btn-secondary:hover {
+    background-color: #dbeafe;
+}
+
+.btn-muted {
+    background-color: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-muted:hover {
+    background-color: #f1f5f9;
+}
+
+/* Active Button Click Micro-Animation */
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Empty State Styling */
+.empty-state {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 2px dashed #e2e8f0;
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.empty-state h3 {
+    font-size: 1rem;
+    color: #334155;
+    margin: 0 0 4px 0;
+}
+
+.empty-state p {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+}
+/* Fix form alignment inside card action areas */
+.card-actions form {
+    width: 100%;
+    margin: 0;
+}
+
+.dual-actions form {
+    flex: 1;
+    display: flex;
+}
+
+.dual-actions form .btn {
+    width: 100%;
+}
+/* ==========================================================================
+   Bigger & Faster Toast Notifications
+   ========================================================================== */
+.toast-notification {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 340px;
+    max-width: 460px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.12), 0 8px 12px -6px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid #cbd5e1;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0f172a;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: toastSlideIn 0.25s ease-out forwards;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Animations */
+@keyframes toastSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toast-notification.hide {
+    opacity: 0 !important;
+    transform: translateX(50px) !important;
+}
+
+/* Color Status Variants */
+.toast-notification.success {
+    border-left-color: #22c55e;
+}
+
+.toast-notification.error {
+    border-left-color: #ef4444;
+}
+
+.toast-notification.warning {
+    border-left-color: #f59e0b;
+}
+
+.toast-notification.info {
+    border-left-color: #2563eb;
+}
+
+.toast-message {
+    flex-grow: 1;
+    line-height: 1.4;
+}
+
+/* Bigger Functional Close Button */
+.toast-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.toast-close-btn:hover {
+    color: #0f172a;
+    transform: scale(1.15);
+}
+
+@media (max-width: 520px) {
+    .toast-notification {
+        top: 16px;
+        right: 16px;
+        left: 16px;
+        min-width: unset;
+        max-width: calc(100% - 32px);
+    }
+}

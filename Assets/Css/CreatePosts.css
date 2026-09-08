@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Create Post Header Area
+   ========================================================================== */
+.create-post-header {
+    margin-bottom: 24px;
+}
+
+.create-post-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.create-post-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Centered Form Container Card
+   ========================================================================== */
+.create-post-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.create-post-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ==========================================================================
+   Creator Profile Bar
+   ========================================================================== */
+.creator-profile-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.creator-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #dbeafe;
+}
+
+.creator-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creator-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.creator-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   Post Textarea Controls
+   ========================================================================== */
+.post-input-group {
+    width: 100%;
+}
+
+.post-textarea {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    resize: vertical;
+    outline: none;
+    transition: var(--transition);
+}
+
+.post-textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    background-color: var(--card-bg);
+}
+
+/* ==========================================================================
+   Image Dropzone & Dynamic Preview Layout
+   ========================================================================== */
+.image-upload-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+.upload-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.upload-dropzone:hover {
+    border-color: var(--primary-color);
+    background-color: #eff6ff;
+}
+
+.dropzone-icon {
+    font-size: 1.75rem;
+    margin-bottom: 6px;
+}
+
+.dropzone-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.dropzone-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Preview Image Card */
+.image-preview-card {
+    position: relative;
+    width: 100%;
+    max-height: 340px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.image-preview-card.hidden {
+    display: none;
+}
+
+.image-preview-card img {
+    width: 100%;
+    height: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(15, 23, 42, 0.7);
+    color: #ffffff;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.remove-image-btn:hover {
+    background-color: rgba(239, 68, 68, 0.9);
+}
+
+/* ==========================================================================
+   Form Actions Buttons
+   ========================================================================== */
+.create-post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+.btn-cancel:hover {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 640px) {
+    .create-post-container {
+        max-width: 100%;
+    }
+
+    .create-post-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
