@@ -15,6 +15,7 @@
                 <h2>Welcome Back User, whats on your mind?</h2>
                 <p>Please enter your details to sign in</p>
                 <p>Leave feed back</p>
+                <p>any Doubts?</p>
             </header>
 
             <?php if (isset($_SESSION['message']) && isset($_SESSION['status'])): ?>
