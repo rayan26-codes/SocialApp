@@ -12,7 +12,7 @@
     <main class="auth-container">
         <section class="auth-card">
             <header class="auth-header">
-                <h2>Welcome Back user</h2>
+                <h2>Hello and Welcome Back</h2>
                 <p>Please enter your details to sign in</p>
             </header>
 
