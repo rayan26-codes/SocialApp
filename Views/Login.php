@@ -14,7 +14,6 @@
             <header class="auth-header">
                 <h2>Welcome Back User, whats on your mind?</h2>
                 <p>Please enter your det...</p>
-                <p>Have any Ques? Contact us.</p>
             </header>
 
             <?php if (isset($_SESSION['message']) && isset($_SESSION['status'])): ?>
