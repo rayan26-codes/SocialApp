@@ -13,7 +13,7 @@
         <section class="auth-card">
             <header class="auth-header">
                 <h2>Welcome Back User, whats on your mind?</h2>
-                <p>Please enter your details to sign up</p>
+                <p>Please enter your details to Sign In</p>
             </header>
 
             <?php if (isset($_SESSION['message']) && isset($_SESSION['status'])): ?>
